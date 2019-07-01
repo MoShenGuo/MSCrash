@@ -16,8 +16,9 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "MSCrash"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "iOS 性能崩溃监控框架"
+  spec.swift_version    = '4.1'
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,6 +26,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+   APP Crash monitoring
                    DESC
 
   spec.homepage     = "https://github.com/MoShenGuo/MSCrash"
@@ -39,7 +41,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.license      = "MIT (example)"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -63,8 +65,8 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
+   spec.platform     = :ios
+   spec.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -79,7 +81,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/MSCrash.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/MoShenGuo/MSCrash.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,10 +92,10 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "MSCrash", "MSCrash/**/**/*.{h}"
-  spec.exclude_files = "Classes/Exclude"
+  spec.source_files  = "MSCrash/**/*"
+ #spec.exclude_files = "Classes/Exclude"
 
-  # spec.public_header_files = "Classes/**/*.h"
+  spec.public_header_files = "MSCrash/**/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -116,9 +118,9 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
-  # spec.framework  = "SomeFramework"
-   spec.frameworks = "Foundation", "UIKit"
-   s.vendored_frameworks = 'MSCrash.framework'
+   spec.framework  = "Foundation"
+  # spec.frameworks = 'Foundation'
+# s.vendored_frameworks = '/MSCrash/MSCrash.framework'
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
@@ -133,6 +135,6 @@ Pod::Spec.new do |spec|
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
+  spec.dependency "JSONKit", "~> 1.4"
 
 end
