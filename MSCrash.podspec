@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "MSCrash"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "iOS 性能崩溃监控框架"
   spec.swift_version    = "4.1"
 
