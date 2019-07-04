@@ -1,6 +1,0 @@
-framework module MSCrash {
-  umbrella header "MSCrash.h"
-
-  export *
-  module * { export * }
-}

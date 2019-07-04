@@ -18,7 +18,7 @@ Pod::Spec.new do |spec|
   spec.name         = "MSCrash"
   spec.version      = "0.0.3"
   spec.summary      = "iOS 性能崩溃监控框架"
-  spec.swift_version    = '4.1'
+  spec.swift_version    = "4.1"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -65,7 +65,7 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-   spec.platform     = :ios
+#spec.platform     = :ios
    spec.platform     = :ios, "8.0"
 
   #  When using multiple platforms
@@ -92,10 +92,10 @@ spec.source = { :git => "https://github.com/MoShenGuo/MSCrash.git", :tag => "#{s
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "MSCrash/**/*"
+  spec.source_files  = "MSCrash/*"
  #spec.exclude_files = "Classes/Exclude"
 
-  spec.public_header_files = "MSCrash/**/**/*.h"
+#spec.public_header_files = "MSCrash/**/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
